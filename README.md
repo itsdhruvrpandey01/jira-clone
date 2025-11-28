@@ -25,3 +25,40 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+### folder structure 
+src/
+└── app/
+    ├── app.component.ts         # The Root (contains only <router-outlet>)
+    ├── app.config.ts            # Application Config (Providers, Routes)
+    ├── app.routes.ts            # Main Routing Table
+    │
+    ├── core/                    # SINGLETONS (Loaded once)
+    │   ├── models/              # Interfaces (task.model.ts, user.model.ts)
+    │   ├── services/            # Global State
+    │   │   ├── task.service.ts  # The Signal Store logic
+    │   │   └── mock-api.service.ts # Simulates backend latency
+    │   ├── interceptors/        # Error handling & Auth simulation
+    │   └── utils/               # Helper functions (date formatting, uuid generator)
+    │
+    ├── shared/                  # DUMB COMPONENTS (UI Library)
+    │   ├── components/
+    │   │   ├── ui-button/       # Standalone Component
+    │   │   ├── ui-card/         # Standalone Component
+    │   │   ├── ui-badge/        # For Priority/Status labels
+    │   │   └── ui-avatar/       # User profile circle
+    │   ├── directives/          # e.g., ClickOutsideDirective
+    │   └── pipes/               # e.g., TimeAgoPipe
+    │
+    └── features/                # SMART COMPONENTS (Business Logic)
+        ├── kanban-board/        # The Main View
+        │   ├── board.component.ts     # Orchestrates columns
+        │   ├── components/
+        │   │   ├── board-column/      # A single lane (Todo/Done)
+        │   │   └── board-card/        # The drag-drop item
+        │
+        └── task-details/        # The Edit/Create Modal
+            └── task-form.component.ts # Reactive Form logic
