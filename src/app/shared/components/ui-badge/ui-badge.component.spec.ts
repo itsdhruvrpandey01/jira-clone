@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UiBatchComponent } from './ui-batch.component';
+import { UiBadgeComponent } from './ui-badge.component';
 
-describe('UiBatchComponent', () => {
-  let component: UiBatchComponent;
-  let fixture: ComponentFixture<UiBatchComponent>;
+describe('UiBadgeComponent', () => {
+  let component: UiBadgeComponent;
+  let fixture: ComponentFixture<UiBadgeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UiBatchComponent]
+      declarations: [UiBadgeComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(UiBatchComponent);
+    fixture = TestBed.createComponent(UiBadgeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

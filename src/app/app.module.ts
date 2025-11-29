@@ -7,6 +7,7 @@ import { UiButtonComponent } from './shared/components/ui-button/ui-button.compo
 import { UiCardComponent } from './shared/components/ui-card/ui-card.component';
 import { UiBatchComponent } from './shared/components/ui-batch/ui-batch.component';
 import { UiAvatarComponent } from './shared/components/ui-avatar/ui-avatar.component';
+import { UiBadgeComponent } from './shared/components/ui-badge/ui-badge.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UiAvatarComponent } from './shared/components/ui-avatar/ui-avatar.compo
     UiButtonComponent,
     UiCardComponent,
     UiBatchComponent,
-    UiAvatarComponent
+    UiAvatarComponent,
+    UiBadgeComponent
   ],
   imports: [
     BrowserModule,
